@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var obj = {
+            sayhello: function () {
+                console.log(this);
+            }
+        };
+
+        var x = Object.create(obj);
+        console.log(x);
+
+        function objectCreate(parent) {
+            function F() {}
+            F.prototype = parent;
+            return new F();
+        }
+
+        var y = objectCreate(obj);
+        console.log(y);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

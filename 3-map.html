@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var arr = [1,2,3];
+
+        function square(x) {
+            return x * x;
+        }
+
+        var squares = arr.map(square);
+        var squares2 = arr.map(function (x, i) {
+            console.log(i);
+            return x * x;
+        });
+
+        var names = ['Chris', 'Rashmika', 'Lakshmi'];
+        var sum = names.reduce(function (obj, name) {
+            obj[names.indexOf(name)] = name;
+            return obj;
+        }, {});
+
+        console.log(sum);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

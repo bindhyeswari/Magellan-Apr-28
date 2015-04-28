@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div></div>
+    <div class="data">This is a data div</div>
+    <div class="data">This is the second data div</div>
+    <script>
+
+        var div = document.getElementsByTagName('div')[0];
+        console.log(div);
+        div.innerHTML = 'Rashmika<span>Chris</span>';
+        console.log(div.children);
+        console.log(div.childNodes);
+        console.log(div.childNodes[0].nodeType);
+        console.log(div.childNodes[1].nodeType);
+
+        console.log(document.body.firstElementChild.firstElementChild);
+
+        var datadivs = document.querySelectorAll('div.data');
+        console.log(datadivs);
+
+        console.log(div.parentNode.textContent);
+
+        var divs = Array.prototype.slice.call(document.querySelectorAll('div'));
+
+        var arr = divs.map(function (div) {
+            return div.textContent;
+        });
+
+
+
+
+    </script>
+</body>
+</html>
