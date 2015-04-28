@@ -6,20 +6,38 @@
 
 </head>
 <body>
-    <div>Lakshmispan <span>Chris</span></div>
+    <div>Lakshmi <span>Chris</span></div>
     <div>
         Lakshmi
         <span>Chris</span>
+        <ul>
+            <li>USA</li>
+            <li>india</li>
+            <li>france</li>
+        </ul>
     </div>
     <script>
 
+        function recursiveFind(element) {
+            var childnodes = Array.prototype.slice.call(element.childNodes);
+            var str = '';
+            childnodes.map(function (childNode) {
+                if (childNode.nodeType === 3) {
+                    str += childNode.nodeValue;
+                } else if (childNode.nodeType === 1) {
+                    str += recursiveFind(childNode);
+                }
+            });
+            return str;
+        }
+
         HTMLDivElement.prototype.mytextContent = function () {
             // write a function that simulates textContent
-
+            return recursiveFind(this);
         };
 
         var divs = document.querySelectorAll('div');
-        console.log(divs[1].firstChild.nodeValue);
+        // console.log(divs[1].firstChild.nodeValue);
 
 
         console.log(divs[1].mytextContent());

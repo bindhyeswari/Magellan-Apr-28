@@ -5,4 +5,8 @@ Rashmika, Chris and Lakshmi
 -- run a jsperf test to compare performance of querySelector vs getElementsByTagName http://jsperf.com/sparsevsobject
 -- map, reduce, forEach, indexOf
 -- https://developer.mozilla.org/en-US/docs/Web/API/Node
+-- Objects / Functions
+
+#Mandatory
+-- Array.prototype methods
 
