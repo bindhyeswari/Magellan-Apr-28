@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <div>Lakshmispan <span>Chris</span></div>
+    <div>
+        Lakshmi
+        <span>Chris</span>
+    </div>
+    <script>
+
+        HTMLDivElement.prototype.mytextContent = function () {
+            // write a function that simulates textContent
+
+        };
+
+        var divs = document.querySelectorAll('div');
+        console.log(divs[1].firstChild.nodeValue);
+
+
+        console.log(divs[1].mytextContent());
+
+
+    </script>
+</body>
+</html>
